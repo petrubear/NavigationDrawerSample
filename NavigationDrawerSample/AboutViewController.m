@@ -27,9 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    MMDrawerBarButtonItem *button = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
-    self.navigationItem.leftBarButtonItem = button;
+	[self setTitle:@"About"];
+    [self.view setBackgroundColor:[UIColor colorWithRed:66.0/255.0
+                                                  green:69.0/255.0
+                                                   blue:71.0/255.0
+                                                  alpha:1.0]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,10 +40,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Button Handlers
 
--(void)leftDrawerButtonPress:(id)sender {
-    //[self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-}
 
 @end

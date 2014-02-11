@@ -119,18 +119,22 @@
     NSInteger index = indexPath.row;
     UIViewController *aboutController = [self.storyboard instantiateViewControllerWithIdentifier:@"vcabout"];
     UIViewController *mainController = [self.storyboard instantiateViewControllerWithIdentifier:@"vcmain"];
+    UINavigationController *controller = (UINavigationController *)self.mm_drawerController.centerViewController;
     
     switch (index) {
         case 0: {
             [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-                self.mm_drawerController.centerViewController = mainController;
-                [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeNone];
+                //self.mm_drawerController.centerViewController = mainController;
+
+                [controller setViewControllers:[NSArray arrayWithObject:mainController] animated:NO];
+                [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
             }];
             break;
         }
         case 1: {
             [self.mm_drawerController closeDrawerAnimated:YES completion:^(BOOL finished) {
-                self.mm_drawerController.centerViewController = aboutController;
+                //self.mm_drawerController.centerViewController = aboutController;
+                [controller setViewControllers:[NSArray arrayWithObject:aboutController] animated:NO];
                 [self.mm_drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModeAll];
             }];
         }
