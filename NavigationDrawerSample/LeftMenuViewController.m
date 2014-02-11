@@ -56,7 +56,7 @@
                                                    blue:71.0/255.0
                                                   alpha:1.0]];
    
-    [self.navigationController setTitle:@"Menu Principal"];
+    [self setTitle:@"Menu"];
 }
 
 - (void)didReceiveMemoryWarning
