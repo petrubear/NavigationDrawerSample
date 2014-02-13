@@ -8,7 +8,7 @@
 
 #import "MainViewController.h"
 #import "MMDrawerBarButtonItem.h"
-#import "UIColor+iOS7Colors.h"
+
 
 @interface MainViewController ()
 
@@ -32,8 +32,7 @@
     [self setTitle:@"Main"];
     
     MMDrawerBarButtonItem *button = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
-    [button setShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
-    [button setMenuButtonColor:[UIColor iOS7darkGrayColor] forState:UIControlStateNormal];
+    
     self.navigationItem.leftBarButtonItem = button;
     
     

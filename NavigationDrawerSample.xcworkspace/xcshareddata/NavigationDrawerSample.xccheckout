@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>035ACA5D-D1C6-4112-B80F-CA201809905C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>NavigationDrawerSample</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>38789D9F-0254-4ABE-A661-70DB2138AC94</key>
+		<string>https://github.com/petrubear/NavigationDrawerSample.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>NavigationDrawerSample.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>38789D9F-0254-4ABE-A661-70DB2138AC94</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/petrubear/NavigationDrawerSample.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>38789D9F-0254-4ABE-A661-70DB2138AC94</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>38789D9F-0254-4ABE-A661-70DB2138AC94</string>
+			<key>IDESourceControlWCCName</key>
+			<string>NavigationDrawerSample</string>
+		</dict>
+	</array>
+</dict>
+</plist>

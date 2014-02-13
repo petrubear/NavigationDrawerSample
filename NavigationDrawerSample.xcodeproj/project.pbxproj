@@ -24,6 +24,7 @@
 		B735615918AA8493006EDB9A /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B735615818AA8493006EDB9A /* LeftMenuViewController.m */; };
 		B735615C18AA84CA006EDB9A /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B735615B18AA84CA006EDB9A /* MainViewController.m */; };
 		B735616118AA8D66006EDB9A /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B735616018AA8D66006EDB9A /* AboutViewController.m */; };
+		B76A63D118AC439500284AC1 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B76A63D018AC439500284AC1 /* MasterViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		B735615B18AA84CA006EDB9A /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		B735615F18AA8D66006EDB9A /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		B735616018AA8D66006EDB9A /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B76A63CF18AC439500284AC1 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		B76A63D018AC439500284AC1 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				B735615B18AA84CA006EDB9A /* MainViewController.m */,
 				B735615F18AA8D66006EDB9A /* AboutViewController.h */,
 				B735616018AA8D66006EDB9A /* AboutViewController.m */,
+				B76A63CF18AC439500284AC1 /* MasterViewController.h */,
+				B76A63D018AC439500284AC1 /* MasterViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -320,6 +325,7 @@
 				B735616118AA8D66006EDB9A /* AboutViewController.m in Sources */,
 				B735615918AA8493006EDB9A /* LeftMenuViewController.m in Sources */,
 				B735615C18AA84CA006EDB9A /* MainViewController.m in Sources */,
+				B76A63D118AC439500284AC1 /* MasterViewController.m in Sources */,
 				B72E3D4D18A965A600E33579 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,16 +12,16 @@ Official appledoc documentation can be found at [CocoaDocs](http://cocoadocs.org
 
 ---
 ##Installing MMDrawerController
-<img src="http://cocoapod-badges.herokuapp.com/v/MMDrawerController/badge.png"/><br/>
+<img src="https://cocoapod-badges.herokuapp.com/v/MMDrawerController/badge.png"/><br/>
 You can install MMDrawerController in your project by using [CocoaPods](https://github.com/cocoapods/cocoapods):
 
 ```Ruby
-pod 'MMDrawerController', '~> 0.4.0'
+pod 'MMDrawerController', '~> 0.5.2'
 ```
 
 ---
 ##Creating a Drawer Controller
-Creating a `MMDrawerController` is as easy as creating a center view controller and the drawer view controllers, and init'int the drawer.
+Creating a `MMDrawerController` is as easy as creating a center view controller and the drawer view controllers, and init'ing the drawer.
 
 ```Objective-C
 UIViewController * leftDrawer = [[UIViewController alloc] init];
@@ -114,6 +114,17 @@ You can use the `UIViewController+MMDrawerController` category in order to query
 ###State Restoration
 Beginning with 0.4.0, `MMDrawerController` supports iOS state restoration. In order to opt in to state restoration for `MMDrawerController`, you must set the `restorationIdentifier` of your drawer controller. Instances of your `centerViewController`, `leftDrawerViewController` and `rightDrawerViewController` must also be configured with their own `restorationIdentifier` (and optionally a restorationClass) if you intend for those to be restored as well. If your MMDrawerController had an open drawer when your app was sent to the background, that state will also be restored.
 
+##iOS 7 Status Bar Support
+###Child View Controller Support
+Beginning with iOS 7, the child view controllers will by default determine the state of the status bar, including its' style and whether or not it is hidden. This value will also be updated anytime the open side changes state, meaning that a side drawer can provide a different value than the center view controller.
+
+If you do not want the drawer controller to consult the child view controllers for this state, you should subclass `MMDrawerController`, override `childViewControllerForStatusBarStyle` and `childViewControllerForStatusBarHidden`, and return nil for both.
+
+###Custom Status Bar Background View
+If you have a contrasting colors between your center view controller and your drawer controllers, the new iOS 7 status bar handling could cause your application to look less than ideal. Starting with iOS 7, `MMDrawerController` supports drawing a custom status bar area at the top of the screen, to give you an area to display the status bar with a constant color, while allowing you to drawer custom content below the status bar without worrying about the color of your navigation bars or the top of your content running up underneath the status bar. Using the feature essentially mimics <= iOS 6.X behavior. 
+
+To enable a custom status bar, simple set `showsStatusBarBackgroundView` to `YES`. By default, this will draw a black a view underneath the status bar, and adjust your to content to be laid out lower than the status bar. If you would like a custom status background color, you can set `statusBarViewBackgroundColor` to whatever color you desire.
+
 ---
 ##Subclassing
 If you plan to subclass `MMDrawerController`, import `MMDrawerController+Subclass.h` into your subclass to access protected methods for `MMDrawerController.` Note that several methods assume and require you to call super, so be sure to follow that convention.
@@ -127,8 +138,10 @@ A few extras to make your life easier...
 ###MMDrawerBarButtonItem
 Using Paint Code, we created a standard Menu Button that you can use in any `UINavigationBar`, and make it whatever color you want. It's included as a subspec to this library. Enjoy.
 
+Starting with iOS 7, the drawer button is now drawn in a much thinner stroke. In addition, the color methods have been deprecated, and the color will now be determined by the `tintColor.` Also note that the shadow has been deprecated to be more in line with the design themes of the OS.
+
 ###Prebuilt Example Animations
-In order to make it as easy as possible for you to use this library, we built some of the common animations we see out there today. Simply include the `MMDrawerVisualState` subspec, and use any of the prebuilt visual states.
+In order to make it as easy as possible for you to use this library, we built some of the common animations we see out there today. Simply include the `MMDrawerVisualStates` subspec, and use any of the prebuilt visual states.
 
 For example, if you wanted to use a slide and scale animation, you would do the following:
 
@@ -164,6 +177,12 @@ In order to keep this library light-weight, we had to make some design trade off
 * Support presenting the drawer above the center view controller (like the Google+ app).
 
 We're sure this list will grow over time. But that's the cost of keeping something maintainable :)
+
+---
+##Workarounds/FAQs
+####How do I support editing/dragging cells in a tableview in the center view controller?
+The best way to support this is to set the open/close mask to `MMOpenDrawerGestureModeNone` / `MMCloseDrawerGestureModeNone` while editing is enabled, and restore the mask when editing is finished. This will allow the proper gestures/touches to be passed all the way to the table view. ([#184](https://github.com/mutualmobile/MMDrawerController/issues/184))
+
 
 ---
 ##Credit

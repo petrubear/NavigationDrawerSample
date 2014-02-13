@@ -1,27 +1,25 @@
 PODS:
-  - iOS7Colors (2.0.0)
-  - MMDrawerController (0.4.0):
+  - MMDrawerController (0.5.2):
     - MMDrawerController/Core
     - MMDrawerController/MMDrawerBarButtonItem
     - MMDrawerController/MMDrawerVisualStates
     - MMDrawerController/Subclass
   - MMDrawerController+Storyboard (0.0.1):
     - MMDrawerController (~> 0.4.0)
-  - MMDrawerController/Core (0.4.0)
-  - MMDrawerController/MMDrawerBarButtonItem (0.4.0):
+  - MMDrawerController/Core (0.5.2)
+  - MMDrawerController/MMDrawerBarButtonItem (0.5.2):
     - MMDrawerController/Core
-  - MMDrawerController/MMDrawerVisualStates (0.4.0):
+  - MMDrawerController/MMDrawerVisualStates (0.5.2):
     - MMDrawerController/Core
-  - MMDrawerController/Subclass (0.4.0):
+  - MMDrawerController/Subclass (0.5.2):
     - MMDrawerController/Core
 
 DEPENDENCIES:
-  - iOS7Colors (~> 2.0.0)
+  - MMDrawerController
   - MMDrawerController+Storyboard
 
 SPEC CHECKSUMS:
-  iOS7Colors: 80d700ca0fe4415eeea1cfb74d4d790ffa0375ab
-  MMDrawerController: 44baaee6b79487b4681eb61597fb790586909c0c
+  MMDrawerController: 60bce0387ff42670d9a5a392e2f531be2fd39ce9
   MMDrawerController+Storyboard: b245b3a2ff977df8501ca1b99efd2c097d0b39dd
 
 COCOAPODS: 0.29.0

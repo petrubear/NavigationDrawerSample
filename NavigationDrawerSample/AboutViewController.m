@@ -8,7 +8,6 @@
 
 #import "AboutViewController.h"
 #import "MMDrawerBarButtonItem.h"
-#import "UIColor+iOS7Colors.h"
 
 @interface AboutViewController ()
 
@@ -16,42 +15,24 @@
 
 @implementation AboutViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    
     if (self) {
         // Custom initialization
     }
+    
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	[self setTitle:@"About"];
-    
-    MMDrawerBarButtonItem *button = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
-    [button setShadowColor:[UIColor clearColor] forState:UIControlStateNormal];
-    [button setMenuButtonColor:[UIColor iOS7darkGrayColor] forState:UIControlStateNormal];
-    self.navigationItem.leftBarButtonItem = button;
-    
-    [self.view setBackgroundColor:[UIColor colorWithRed:208.0/255.0
-                                                  green:208.0/255.0
-                                                   blue:208.0/255.0
-                                                  alpha:1.0]];
+    [self setTitle:@"About"];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-
-#pragma mark - Button Handlers
-
--(void)leftDrawerButtonPress:(id)sender {
-    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
 }
 
 @end

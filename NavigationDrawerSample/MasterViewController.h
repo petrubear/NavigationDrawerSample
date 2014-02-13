@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMDrawerBarButtonItem.h"
+#import "UIViewController+MMDrawerController.h"
 
 @interface MasterViewController : UIViewController
 

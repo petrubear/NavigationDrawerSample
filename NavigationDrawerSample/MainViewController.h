@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "UIViewController+MMDrawerController.h"
+#import "MasterViewController.h"
 
 
-@interface MainViewController : UIViewController
+
+@interface MainViewController : MasterViewController
 
 @end
